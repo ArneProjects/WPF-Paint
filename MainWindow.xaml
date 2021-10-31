@@ -8,23 +8,51 @@
         Title="WPF-Paint" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Pen" Name="Button_Pen" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100" Margin="10,10,0,0"/>
-            <Button Content="Eraser" Name="Button_Eraser" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100" Margin="10,10,0,0"/>
-            <ComboBox Name="ComboBox_Forms" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100" Margin="10,10,0,0">
-                <ComboBoxItem Name="CB_Default" IsSelected="True">Forms</ComboBoxItem>
-                <ComboBoxItem Name="CB_Circle">Circle</ComboBoxItem>
-                <ComboBoxItem Name="CB_Triangle">Triangle</ComboBoxItem>
-                <ComboBoxItem Name="CB_Rectangle">Rectangle</ComboBoxItem>
+            <Button Name="Button_Pen" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Pen">
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/Pen.jpg" Stretch="Fill"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Name="Button_Eraser" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Eraser">
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/Eraser.jpg" Stretch="Fill"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <ComboBox Name="ComboBox_Shapes" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="70" Margin="10,10,0,0" ToolTip="Shapes">
+                <ComboBoxItem Name="CB_Circle" IsSelected="True">
+                    <Image Source="Assets/Circle.jpg" Stretch="Fill" Height="40" Width="40" ToolTip="Circle"></Image>
+                </ComboBoxItem>
+                <ComboBoxItem Name="CB_Triangle" IsSelected="True">
+                    <Image Source="Assets/Triangle.jpg" Stretch="Fill" Height="40" Width="40" ToolTip="Triangle"></Image>
+                </ComboBoxItem>
+                <ComboBoxItem Name="CB_Rectangle" IsSelected="True">
+                    <Image Source="Assets/Rectangle.jpg" Stretch="Fill" Height="40" Width="40" ToolTip="Rectangle"></Image>
+                </ComboBoxItem>
             </ComboBox>
-            <Button Content="SelectArea" Name="Button_SelectArea" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100" Margin="10,10,0,0"/>
+            <Button Name="Button_SelectArea" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Select">
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/SelectArea.jpg" Stretch="Fill"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="70" Margin="10,10,0,0">
+                <RadioButton>
+                    <Image Source="Assets/Line_Thin.jpg" Height="20" Width="40" ToolTip="Thin"></Image>
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Assets/Line_Normal.jpg" Height="20" Width="40" ToolTip="Normal"></Image>
+                </RadioButton>
+                <RadioButton>
+                    <Image Source="Assets/Line_Thick.jpg" Height="20" Width="40" ToolTip="Thick"></Image>
+                </RadioButton>
+            </StackPanel>
             <Border
-            BorderThickness="2"
+            BorderThickness="1"
             BorderBrush="Black"
             Background="White"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="10,10,0,0" Height="25" Width="200">
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="200" Margin="10, 10, 0, 0">
+            Margin="10,10,0,0" Height="50" Width="200">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="200">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -36,9 +64,23 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="Grid_Black" Grid.Row="0" Grid.Column="0" Background="Black" ToolTip="Black"></TextBlock>
+                    <TextBlock x:Name="Grid_White" Grid.Row="0" Grid.Column="1" Background="White" ToolTip="White"></TextBlock>
+                    <TextBlock x:Name="Grid_DimGray" Grid.Row="0" Grid.Column="2" Background="DimGray" ToolTip="DimGray"></TextBlock>
+                    <TextBlock x:Name="Grid_Brown" Grid.Row="0" Grid.Column="3" Background="Brown" ToolTip="Brown"></TextBlock>
+                    <TextBlock x:Name="Grid_Red" Grid.Row="0" Grid.Column="4" Background="Red" ToolTip="Red"></TextBlock>
+                    <TextBlock x:Name="Grid_OrangeRed" Grid.Row="1" Grid.Column="0" Background="OrangeRed" ToolTip="OrangeRed"></TextBlock>
+                    <TextBlock x:Name="Grid_Gold" Grid.Row="1" Grid.Column="1" Background="Gold" ToolTip="Gold"></TextBlock>
+                    <TextBlock x:Name="Grid_Cyan" Grid.Row="1" Grid.Column="2" Background="Cyan" ToolTip="Cyan"></TextBlock>
+                    <TextBlock x:Name="Grid_Blue" Grid.Row="1" Grid.Column="3" Background="Blue" ToolTip="Blue"></TextBlock>
+                    <TextBlock x:Name="Grid_Green" Grid.Row="1" Grid.Column="4" Background="Green" ToolTip="Green"></TextBlock>
                 </Grid>
             </Border>
-            <Button Content="Safe Image" Name="Button_SafeImage" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="100" Margin="10,10,0,0"/>
+            <Button Name="Button_Save" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="170,10,0,0" ToolTip="Save">
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/Save.jpg" Stretch="Fill"></ImageBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
         <Border
             BorderThickness="2"
@@ -46,7 +88,7 @@
             Background="White"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Margin="10,50,10,10" Height="350" Width="760">
+            Margin="10,76,0,0" Height="324" Width="760">
             <Canvas Name="Canvas_DrawingArea" HorizontalAlignment="Left" Margin="2,2,2,2" VerticalAlignment="Top"/>
         </Border>
     </Grid>

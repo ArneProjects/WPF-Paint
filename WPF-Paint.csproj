@@ -94,5 +94,28 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Shapes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Eraser.jpg" />
+    <Resource Include="Assets\Pen.jpg" />
+    <Resource Include="Assets\Save.jpg" />
+    <Resource Include="Assets\SelectArea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Rectangle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Triangle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Circle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Line_Normal.jpg" />
+    <Resource Include="Assets\Line_Thick.jpg" />
+    <Resource Include="Assets\Line_Thin.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
