@@ -35,7 +35,7 @@
                 </Button.Background>
             </Button>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="70" Margin="10,10,0,0">
-                <RadioButton>
+                <RadioButton IsChecked="True">
                     <Image Source="Assets/Line_Thin.jpg" Height="20" Width="40" ToolTip="Thin"></Image>
                 </RadioButton>
                 <RadioButton>
