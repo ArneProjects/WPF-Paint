@@ -10,7 +10,7 @@ namespace WPF_Paint
     {
         private int radius;
 
-        public Circle(int x, int y, int size, int r, int g, int b, int radius) : base(x, y, size, r, g, b)
+        public Circle(int x, int y, int size, int radius) : base(x, y, size)
         {
             this.radius = radius;
         }

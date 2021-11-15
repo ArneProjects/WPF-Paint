@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace WPF_Paint
 {
-    public abstract class Shape : IThickness, IColor
+    public abstract class Shape
     {
         private int x;
         private int y;
+        private int size;
+        private String rgb;
 
-        public Shape(int x, int y, int size, int r, int g, int b)
+        public Shape(int x, int y, int size)
         {
             this.x = x;
             this.y = y;
-            R = r;
-            G = g;
-            B = b;
+            this.size = size;
         }
 
         public int X
@@ -32,10 +32,11 @@ namespace WPF_Paint
             get { return y; }
         }
 
-        public int Size { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int R { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int G { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int B { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Size
+        {
+            get { return size; }
+            set { size = value; }
+        }
 
         public abstract void Draw();
     }

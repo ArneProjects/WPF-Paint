@@ -13,7 +13,7 @@ namespace WPF_Paint
         private int edge1;
         private int edge2;
 
-        public Triangle(int x, int y, int size, int r, int g, int b, int angle1, int angle2, int edge1, int edge2) : base(x, y, size, r, g, b)
+        public Triangle(int x, int y, int size, int angle1, int angle2, int edge1, int edge2) : base(x, y, size)
         {
             this.angle1 = angle1;
             this.angle2 = angle2;

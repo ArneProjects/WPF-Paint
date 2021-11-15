@@ -8,12 +8,12 @@
         Title="WPF-Paint" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Button Name="Button_Pen" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Pen">
+            <Button Name="Button_Pen" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Pen" Click="Button_Pen_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/Pen.jpg" Stretch="Fill"></ImageBrush>
                 </Button.Background>
             </Button>
-            <Button Name="Button_Eraser" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Eraser">
+            <Button Name="Button_Eraser" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Eraser" Click="Button_Eraser_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/Eraser.jpg" Stretch="Fill"></ImageBrush>
                 </Button.Background>
@@ -29,19 +29,19 @@
                     <Image Source="Assets/Rectangle.jpg" Stretch="Fill" Height="40" Width="40" ToolTip="Rectangle"></Image>
                 </ComboBoxItem>
             </ComboBox>
-            <Button Name="Button_SelectArea" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Select">
+            <Button Name="Button_SelectArea" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="10,10,0,0" ToolTip="Select" Click="Button_SelectArea_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/SelectArea.jpg" Stretch="Fill"></ImageBrush>
                 </Button.Background>
             </Button>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="70" Margin="10,10,0,0">
-                <RadioButton IsChecked="True">
+                <RadioButton x:Name="line_thin" IsChecked="True" Checked="line_thin_Checked">
                     <Image Source="Assets/Line_Thin.jpg" Height="20" Width="40" ToolTip="Thin"></Image>
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="line_normal" Checked="line_normal_Checked">
                     <Image Source="Assets/Line_Normal.jpg" Height="20" Width="40" ToolTip="Normal"></Image>
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="line_thick" Checked="line_thick_Checked">
                     <Image Source="Assets/Line_Thick.jpg" Height="20" Width="40" ToolTip="Thick"></Image>
                 </RadioButton>
             </StackPanel>
@@ -64,19 +64,19 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock x:Name="Grid_Black" Grid.Row="0" Grid.Column="0" Background="Black" ToolTip="Black"></TextBlock>
-                    <TextBlock x:Name="Grid_White" Grid.Row="0" Grid.Column="1" Background="White" ToolTip="White"></TextBlock>
-                    <TextBlock x:Name="Grid_DimGray" Grid.Row="0" Grid.Column="2" Background="DimGray" ToolTip="DimGray"></TextBlock>
-                    <TextBlock x:Name="Grid_Brown" Grid.Row="0" Grid.Column="3" Background="Brown" ToolTip="Brown"></TextBlock>
-                    <TextBlock x:Name="Grid_Red" Grid.Row="0" Grid.Column="4" Background="Red" ToolTip="Red"></TextBlock>
-                    <TextBlock x:Name="Grid_OrangeRed" Grid.Row="1" Grid.Column="0" Background="OrangeRed" ToolTip="OrangeRed"></TextBlock>
-                    <TextBlock x:Name="Grid_Gold" Grid.Row="1" Grid.Column="1" Background="Gold" ToolTip="Gold"></TextBlock>
-                    <TextBlock x:Name="Grid_Cyan" Grid.Row="1" Grid.Column="2" Background="Cyan" ToolTip="Cyan"></TextBlock>
-                    <TextBlock x:Name="Grid_Blue" Grid.Row="1" Grid.Column="3" Background="Blue" ToolTip="Blue"></TextBlock>
-                    <TextBlock x:Name="Grid_Green" Grid.Row="1" Grid.Column="4" Background="Green" ToolTip="Green"></TextBlock>
+                    <Button x:Name="Grid_Black" Grid.Row="0" Grid.Column="0" Background="Black" ToolTip="Black" Click="Grid_Black_Click"></Button>
+                    <Button x:Name="Grid_White" Grid.Row="0" Grid.Column="1" Background="White" ToolTip="White" Click="Grid_White_Click"></Button>
+                    <Button x:Name="Grid_DimGray" Grid.Row="0" Grid.Column="2" Background="DimGray" ToolTip="DimGray" Click="Grid_DimGray_Click"></Button>
+                    <Button x:Name="Grid_Brown" Grid.Row="0" Grid.Column="3" Background="Brown" ToolTip="Brown" Click="Grid_Brown_Click"></Button>
+                    <Button x:Name="Grid_Red" Grid.Row="0" Grid.Column="4" Background="Red" ToolTip="Red" Click="Grid_Red_Click"></Button>
+                    <Button x:Name="Grid_OrangeRed" Grid.Row="1" Grid.Column="0" Background="OrangeRed" ToolTip="OrangeRed" Click="Grid_OrangeRed_Click"></Button>
+                    <Button x:Name="Grid_Gold" Grid.Row="1" Grid.Column="1" Background="Gold" ToolTip="Gold" Click="Grid_Gold_Click"></Button>
+                    <Button x:Name="Grid_Cyan" Grid.Row="1" Grid.Column="2" Background="Cyan" ToolTip="Cyan" Click="Grid_Cyan_Click"></Button>
+                    <Button x:Name="Grid_Blue" Grid.Row="1" Grid.Column="3" Background="Blue" ToolTip="Blue" Click="Grid_Blue_Click"></Button>
+                    <Button x:Name="Grid_Green" Grid.Row="1" Grid.Column="4" Background="Green" ToolTip="Green" Click="Grid_Green_Click"></Button>
                 </Grid>
             </Border>
-            <Button Name="Button_Save" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="170,10,0,0" ToolTip="Save">
+            <Button Name="Button_Save" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="50" Margin="170,10,0,0" ToolTip="Save" Click="Button_Save_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/Save.jpg" Stretch="Fill"></ImageBrush>
                 </Button.Background>
@@ -89,7 +89,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Margin="10,76,0,0" Height="324" Width="760">
-            <Canvas Name="Canvas_DrawingArea" HorizontalAlignment="Left" Margin="2,2,2,2" VerticalAlignment="Top"/>
+            <InkCanvas Name="Canvas_DrawingArea" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" Height="314" Width="750"/>
         </Border>
     </Grid>
 </Window>

@@ -11,7 +11,7 @@ namespace WPF_Paint
         private int width;
         private int height;
 
-        public Rectangle(int x, int y, int size, int r, int g, int b, int width, int height) : base(x, y, size, r, g, b)
+        public Rectangle(int x, int y, int size, int width, int height) : base(x, y, size)
         {
             this.width = width;
             this.height = height;
